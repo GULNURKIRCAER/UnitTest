@@ -32,6 +32,7 @@ public class CalculatorParameterizedTest {
     }
     static String [] stringProvider(){
 
+
         String arr[]={"JAVA","JS","TS"};
         return arr;
     }
