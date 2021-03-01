@@ -18,7 +18,6 @@ public class CalculatorParameterizedTest {
 
         Assertions.assertEquals(0,num%3);
     }
-
     @ParameterizedTest
     @EmptySource
     //@NullSource
@@ -26,20 +25,16 @@ public class CalculatorParameterizedTest {
     void testCase3(String input){
         Assertions.assertTrue(input.isEmpty());
     }
-
     @ParameterizedTest
     @MethodSource("stringProvider")
     void testCase4(String arg){
         Assertions.assertNotNull(arg);
     }
-
     static String [] stringProvider(){
 
         String arr[]={"JAVA","JS","TS"};
         return arr;
     }
-
-
     @ParameterizedTest
     @CsvSource({"10,20,30",
                 "20,30,50",
@@ -47,8 +42,6 @@ public class CalculatorParameterizedTest {
     void testCase5(int num1,int num2,int expected){
         Assertions.assertEquals(expected,Calculator.add(num1,num2));
     }
-
-
     @ParameterizedTest
     @CsvFileSource(resources  ="/sampleData.csv",numLinesToSkip=1)
     void testCase6(int num1,int num2,int expected){

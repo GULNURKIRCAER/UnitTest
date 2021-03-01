@@ -9,12 +9,10 @@ public class CheckingAccount {
         balance=pBalance;
         pAccNumber=pAccNumber;
         accountHolder=pAccHolder;
-
     }
     public double deposit(double amount){
         balance+=amount;
         return balance;
-
     }
     public double withDraw(double amount){
         if(amount<=balance){
@@ -28,15 +26,10 @@ public class CheckingAccount {
         if(amount>500 && !branch){
             throw new IllegalArgumentException();
         }
-
         balance-=amount;
         return balance;
 
-
     }
-
-
-
     public double purchase(String item,double price) {
         if(price<=balance){
             balance-=price;
@@ -45,5 +38,4 @@ public class CheckingAccount {
         }
         return balance;
     }
-
 }
