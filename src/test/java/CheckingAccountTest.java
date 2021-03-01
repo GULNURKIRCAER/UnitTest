@@ -31,7 +31,6 @@ class CheckingAccountTest {
         assertEquals(300,checkingAccount.deposit(200));
     }
 
-
     @Test
     void withDraw() {
         assertEquals(80,checkingAccount.withDraw(20));
