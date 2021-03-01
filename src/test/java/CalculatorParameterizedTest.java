@@ -35,6 +35,7 @@ public class CalculatorParameterizedTest {
         String arr[]={"JAVA","JS","TS"};
         return arr;
     }
+
     @ParameterizedTest
     @CsvSource({"10,20,30",
                 "20,30,50",
